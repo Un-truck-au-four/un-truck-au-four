@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           className="w-full h-full object-cover"
           onError={(e) => {
             // Fallback si l'image n'est pas trouvée
-            e.currentTarget.src = "img/pizza.jpg";
+            e.currentTarget.src = "/img/pizza.jpg";
           }}
         />
         <div className="absolute inset-0 bg-black-forest/50"></div>
