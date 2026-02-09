@@ -83,7 +83,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Mortadelle",
         price: 16.00,
         ingredients: "Pesto pistache, Mozza, Mortadelle, Burratta, Truffe",
-        image: "/img/mortadelle.jpg",
+        image: "/img/mortadelles.jpg",
         tag: "Best-Seller"
       },
       {
@@ -183,7 +183,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Munster",
         price: 11.00,
         ingredients: "Crème, Lardons, Oignons, Fromage Munster",
-        image: "/img/munster.jpg",
+        image: "/img/gratinee.jpg",
         tag: "Alsace"
       },
       {
@@ -191,7 +191,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Chèvre",
         price: 11.00,
         ingredients: "Crème, Lardons, Oignons, Fromage de Chèvre, Miel",
-        image: "/img/chevre.jpg",
+        image: "/img/gratinee.jpg",
         tag: "Alsace"
       },
       {
@@ -199,7 +199,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Ail & Ciboulette",
         price: 10.00,
         ingredients: "Crème, Lardons, Oignons, Ail, Ciboulette",
-        image: "/img/ail.jpg",
+        image: "/img/normal.jpg",
         tag: "Alsace"
       }
     ]
