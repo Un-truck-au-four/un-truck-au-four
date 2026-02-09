@@ -33,7 +33,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Margherita",
         price: 9.50,
         ingredients: "Tomate, Mozzarella Fiordilatte, Basilic frais, Huile d'olive",
-        image: "/public/img/margaritha.jpg",
+        image: "/img/margaritha.jpg",
         tag: "Classique"
       },
       {
@@ -41,49 +41,49 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Diavola",
         price: 11.00,
         ingredients: "Tomate, Mozzarella Fiordilatte, Spianata piquante, Basilic frais",
-        image: "/public/img/diavola.jpg",
+        image: "/img/diavola.jpg",
       },
       {
         id: "regina",
         name: "Regina",
         price: 11.00,
         ingredients: "Tomate, Mozza, Jambon blanc, Champignons frais",
-        image: "/public/img/regina.jpg"
+        image: "/img/regina.jpg"
       },
       {
         id: "sicilienne",
         name: "Sicilienne",
         price: 13.00,
         ingredients: "Tomate, Mozza, Anchois, Câpres, Olives",
-        image: "/public/img/sicilienne.jpg" 
+        image: "/img/sicilienne.jpg" 
       },
       {
         id: "4fromages",
         name: "Quatre Fromages",
         price: 13.50,
         ingredients: "Tomate, Mozza, Gorgonzola AOP, Parmigiano, Provola Fumé",
-        image: "/public/img/4fromages.jpg" 
+        image: "/img/4fromages.jpg" 
       },
       {
         id: "batista",
         name: "Batista",
         price: 15.00,
         ingredients: "Crème, Mozza, Provola fumée, Gorgonzola, Parmigiano, Spianata piquante",
-        image: "/public/img/Batista.jpg" 
+        image: "/img/Batista.jpg" 
       },
       {
         id: "parma",
         name: "Parma",
         price: 15.50,
         ingredients: "Tomate, Mozza, Jambon de parme, Roquette, Copeaux de Grana, Balsamique",
-        image: "/public/img/parma.jpg"
+        image: "img/parma.jpg"
       },
       {
         id: "mortadelle",
         name: "Mortadelle",
         price: 16.00,
         ingredients: "Pesto pistache, Mozza, Mortadelle, Burratta, Truffe",
-        image: "/public/img/mortadelle.jpg",
+        image: "/img/mortadelle.jpg",
         tag: "Best-Seller"
       },
       {
@@ -91,7 +91,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Imperatrice",
         price: 16.00,
         ingredients: "Tomate, Mozza, Jambon blanc, Stracciatella, Truffe",
-        image: "/public/img/imperatrice.jpg", 
+        image: "/img/imperatrice.jpg", 
         tag: "Gourmet"
       }
     ]
@@ -104,14 +104,14 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Poulet",
         price: 12.50,
         ingredients: "Crème, Mozza, Poulet, Curry",
-        image: "/public/img/poulet.jpg"
+        image: "/img/poulet.jpg"
       },
       {
         id: "vegetarienne",
         name: "Végétarienne",
         price: 13.50,
         ingredients: "Tomate, Mozza, Oignons, Poivron, Champignons, Olives",
-        image: "/public/img/vegetarienne.jpg",
+        image: "/img/vegetarienne.png",
         tag: "Végétarienne"
       },
       {
@@ -119,42 +119,42 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Campagnarde",
         price: 12.50,
         ingredients: "Tomate, Mozza, Lardons, Oignons, Filet de crème",
-        image: "/public/img/campagnarde.jpg"
+        image: "/img/campagnarde.jpg"
       },
       {
         id: "oriental",
         name: "Oriental",
         price: 12.50,
         ingredients: "Tomate, Mozza, Merguez, Poivrons, Olives",
-        image: "/public/img/orientale.jpg" 
+        image: "/img/orientale.jpg" 
       },
       {
         id: "bolo",
         name: "Bolo",
         price: 12.50,
         ingredients: "Tomate, Mozza, Viande Hachée, Oignons, Olives",
-        image: "/public/img/bolo.jpg"
+        image: "/img/bolo.jpg"
       },
       {
         id: "thon",
         name: "Thon",
         price: 13.50,
         ingredients: "Tomate, Mozza, Thon, Oignons, Filet de crème",
-        image: "/public/img/thon.jpg"
+        image: "/img/thon.jpg"
       },
       {
         id: "samourai",
         name: "Samouraï",
         price: 15.00,
         ingredients: "Crème, Mozza, Oignons, Poulet, Merguez, Sauce samouraï",
-        image: "/public/img/samourai.jpg"
+        image: "/img/samourai.jpg"
       },
       {
         id: "cannibale",
         name: "Cannibale",
         price: 16.00,
         ingredients: "Tomate, Mozza, Merguez, Poulet, Viande Hachée, Olives, Paprika",
-        image: "/public/img/cannibale.jpg",
+        image: "/img/cannibale.jpg",
         tag: "Maxi Viande"
       }
     ]
@@ -167,7 +167,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Normale",
         price: 9.00,
         ingredients: "Crème, Lardons, Oignons",
-        image: "/public/img/normal.jpg",
+        image: "/img/normal.jpg",
         tag: "Alsace"
       },
       {
@@ -175,7 +175,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Gratinée",
         price: 10.00,
         ingredients: "Crème, Lardons, Oignons, Emmental râpé",
-        image: "/public/img/gratinee.jpg",
+        image: "/img/gratinee.jpg",
         tag: "Alsace"
       },
       {
@@ -183,7 +183,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Munster",
         price: 11.00,
         ingredients: "Crème, Lardons, Oignons, Fromage Munster",
-        image: "/public/img/munster.jpg",
+        image: "/img/munster.jpg",
         tag: "Alsace"
       },
       {
@@ -212,7 +212,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Chausson Nutella",
         price: 8.00,
         ingredients: "Délicieux chausson cuit au feu de bois fourré au Nutella",
-        image: "/public/img/chausson-nutella.jpg",
+        image: "/img/chausson-nutella.jpg",
         tag: "Feu de Bois"
       },
       {
@@ -220,7 +220,7 @@ export const MENU_DATA: MenuCategory[] = [
         name: "Tiramisu Maison",
         price: 4.00,
         ingredients: "La recette traditionnelle italienne",
-        image: "/public/img/tiramisu.jpg",
+        image: "/img/tiramisu.jpg",
         tag: "Fait Maison"
       }
     ]
