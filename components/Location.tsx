@@ -5,6 +5,10 @@ type Slot = {
   type: 'Midi' | 'Soir';
   time: string;
   address: string;
+  weeklyAddresses?: {
+    weekType: 'paire' | 'impaire';
+    address: string;
+  }[];
 };
 
 type DaySchedule = {
@@ -13,11 +17,36 @@ type DaySchedule = {
   closed?: boolean;
 };
 
+const getIsoWeekNumber = (date: Date): number => {
+  const utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const day = utcDate.getUTCDay() || 7;
+  utcDate.setUTCDate(utcDate.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(utcDate.getUTCFullYear(), 0, 1));
+  return Math.ceil((((utcDate.getTime() - yearStart.getTime()) / 86400000) + 1) / 7);
+};
+
+const getMondayAddress = (): string => {
+  const isEvenWeek = getIsoWeekNumber(new Date()) % 2 === 0;
+  return isEvenWeek
+    ? "Leroy Merlin Hautepierre"
+    : "Centre Commercial La Vigie";
+};
+
+const isCurrentWeekEven = getIsoWeekNumber(new Date()) % 2 === 0;
+
 const SCHEDULE: DaySchedule[] = [
   { 
     day: "Lundi", 
     slots: [
-      { type: "Midi", time: "11:30 - 13:30", address: "Charles Peguy, 67000 Hautpierre" }
+      {
+        type: "Midi",
+        time: "11:30 - 13:30",
+        address: getMondayAddress(),
+        weeklyAddresses: [
+          { weekType: 'paire', address: "Leroy Merlin Hautepierre" },
+          { weekType: 'impaire', address: "Centre Commercial La Vigie" }
+        ]
+      }
     ] 
   },
   { 
@@ -101,16 +130,57 @@ const Location: React.FC = () => {
                                             <span className="font-bold text-black-forest uppercase text-xs tracking-wider">{slot.type}</span>
                                             <span className="text-gray-500 text-xs ml-auto bg-gray-100 px-2 py-1 rounded-full">{slot.time}</span>
                                         </div>
-                                        <a 
-                                            href={getMapLink(slot.address)} 
-                                            target="_blank" 
-                                            rel="noreferrer"
-                                            className="block text-sm text-gray-700 hover:text-copperwood transition-colors font-medium mt-2 group"
-                                            title="Ouvrir dans Google Maps"
-                                        >
-                                            {slot.address}
-                                            <i className="fas fa-external-link-alt ml-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-olive-leaf"></i>
-                                        </a>
+                                        {slot.weeklyAddresses?.length ? (
+                                            <div className="mt-2 space-y-2">
+                                                {slot.weeklyAddresses.map((weeklyAddress) => {
+                                                    const isActive = (weeklyAddress.weekType === 'paire' && isCurrentWeekEven)
+                                                      || (weeklyAddress.weekType === 'impaire' && !isCurrentWeekEven);
+
+                                                    return (
+                                                      <a
+                                                          key={weeklyAddress.weekType}
+                                                          href={getMapLink(weeklyAddress.address)}
+                                                          target="_blank"
+                                                          rel="noreferrer"
+                                                          title="Ouvrir dans Google Maps"
+                                                          className={`group block rounded-md px-2 py-2 text-sm font-medium transition-colors ${
+                                                            isActive
+                                                              ? 'text-gray-700 hover:text-copperwood bg-cornsilk/40 border border-olive-leaf/20'
+                                                              : 'text-gray-400 hover:text-gray-500 bg-gray-100 border border-gray-300 opacity-70'
+                                                          }`}
+                                                      >
+                                                          <span className={`inline-block mr-2 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                                                            isActive
+                                                              ? 'bg-olive-leaf/15 text-olive-leaf'
+                                                              : 'bg-gray-300 text-gray-600'
+                                                          }`}>
+                                                            Semaine {weeklyAddress.weekType}
+                                                          </span>
+                                                          <span className={isActive ? '' : 'line-through'}>
+                                                            {weeklyAddress.address}
+                                                          </span>
+                                                          {!isActive && (
+                                                            <span className="ml-2 text-[10px] font-bold uppercase tracking-wide text-red-500">
+                                                              (pas cette semaine)
+                                                            </span>
+                                                          )}
+                                                          <i className="fas fa-external-link-alt ml-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-olive-leaf"></i>
+                                                      </a>
+                                                    );
+                                                })}
+                                            </div>
+                                        ) : (
+                                            <a 
+                                                href={getMapLink(slot.address)} 
+                                                target="_blank" 
+                                                rel="noreferrer"
+                                                className="block text-sm text-gray-700 hover:text-copperwood transition-colors font-medium mt-2 group"
+                                                title="Ouvrir dans Google Maps"
+                                            >
+                                                {slot.address}
+                                                <i className="fas fa-external-link-alt ml-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-olive-leaf"></i>
+                                            </a>
+                                        )}
                                     </div>
                                 ))}
                             </div>

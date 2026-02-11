@@ -178,30 +178,6 @@ export const MENU_DATA: MenuCategory[] = [
         image: "/img/gratinee.jpg",
         tag: "Alsace"
       },
-      {
-        id: "tf-munster",
-        name: "Munster",
-        price: 11.00,
-        ingredients: "Crème, Lardons, Oignons, Fromage Munster",
-        image: "/img/gratinee.jpg",
-        tag: "Alsace"
-      },
-      {
-        id: "tf-chevre",
-        name: "Chèvre",
-        price: 11.00,
-        ingredients: "Crème, Lardons, Oignons, Fromage de Chèvre, Miel",
-        image: "/img/gratinee.jpg",
-        tag: "Alsace"
-      },
-      {
-        id: "tf-ail",
-        name: "Ail & Ciboulette",
-        price: 10.00,
-        ingredients: "Crème, Lardons, Oignons, Ail, Ciboulette",
-        image: "/img/normal.jpg",
-        tag: "Alsace"
-      }
     ]
   },
   {
