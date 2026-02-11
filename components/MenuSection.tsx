@@ -51,7 +51,10 @@ const MenuSection: React.FC = () => {
             <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
             <span className="flex items-center"><i className="fas fa-seedling mr-2 text-green-600"></i> Produits Frais</span>
             <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
-            <span className="flex items-center"><i className="fas fa-heart mr-2 text-red-600"></i> Fait Maison</span>
+            <span className="flex items-center"><i className="fas fa-mug-hot mr-2 text-green-600"></i> Fait Maison</span>
+                        <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
+            <span className="flex items-center"><i className="fas fa-heart mr-2 text-red-600"></i> Halal</span>
+
           </div>
           
           <div className="w-24 h-1 bg-sunlit-clay mx-auto mt-6 rounded-full"></div>
