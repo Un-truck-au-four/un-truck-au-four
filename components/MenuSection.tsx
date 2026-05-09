@@ -39,7 +39,6 @@ const MenuSection: React.FC = () => {
     <section id="menu" className="py-24 bg-cornsilk relative scroll-mt-24">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-olive-leaf to-transparent opacity-20"></div>
-
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-copperwood font-bold tracking-widest uppercase text-sm">Nos Créations</span>

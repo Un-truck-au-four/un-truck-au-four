@@ -1,12 +1,16 @@
 import React from 'react';
-import { PHONE_NUMBER, SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from '../constants';
+import { PHONE_NUMBER_COMMANDE, SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from '../constants';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal: (page: 'privacy' | 'terms') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   return (
     <footer id="footer" className="bg-black-forest text-white pt-16 pb-8 border-t border-olive-leaf scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          
+
           {/* Brand & Socials */}
           <div className="text-center md:text-left">
             <h3 className="font-handwritten text-4xl text-cornsilk mb-4">Un Truck Au Four</h3>
@@ -29,8 +33,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center justify-center space-x-3 group">
                 <i className="fas fa-phone-alt text-copperwood group-hover:rotate-12 transition-transform"></i>
-                <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} className="hover:text-white transition-colors text-lg font-bold">
-                  {PHONE_NUMBER}
+                <a href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`} className="hover:text-white transition-colors text-lg font-bold">
+                  {PHONE_NUMBER_COMMANDE}
                 </a>
               </li>
               <li className="flex flex-col items-center">
@@ -60,8 +64,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Un Truck Au Four. Tous droits réservés.</p>
+          <div className="flex gap-6">
+            <button
+              onClick={() => onOpenLegal('privacy')}
+              className="hover:text-gray-300 transition-colors underline underline-offset-2"
+            >
+              Politique de confidentialité
+            </button>
+            <button
+              onClick={() => onOpenLegal('terms')}
+              className="hover:text-gray-300 transition-colors underline underline-offset-2"
+            >
+              Conditions d'utilisation
+            </button>
+          </div>
         </div>
       </div>
     </footer>

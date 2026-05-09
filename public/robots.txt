@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://un-truck-au-four.vercel.app/sitemap.xml

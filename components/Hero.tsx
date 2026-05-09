@@ -1,5 +1,5 @@
 import React from 'react';
-import { PHONE_NUMBER } from '../constants';
+import { PHONE_NUMBER_COMMANDE } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -46,13 +46,13 @@ const Hero: React.FC = () => {
         </p>
         
         <a 
-          href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
+          href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`}
           className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-copperwood rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-copperwood hover:bg-sunlit-clay hover:text-black-forest transform hover:scale-105 shadow-xl"
         >
           <span className="mr-2">Commander maintenant</span>
           <i className="fas fa-pizza-slice group-hover:rotate-12 transition-transform"></i>
           <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
-            {PHONE_NUMBER}
+            {PHONE_NUMBER_COMMANDE}
           </div>
         </a>
       </div>
