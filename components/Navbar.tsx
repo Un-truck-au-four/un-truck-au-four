@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PHONE_NUMBER } from '../constants';
+import { PHONE_NUMBER_COMMANDE } from '../constants';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,11 +44,11 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
+            href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`} 
             className="bg-copperwood text-white px-5 py-2 rounded-full font-bold hover:bg-sunlit-clay hover:text-black-forest transition-colors shadow-md"
           >
             <i className="fas fa-phone-alt mr-2"></i>
-            {PHONE_NUMBER}
+            {PHONE_NUMBER_COMMANDE}
           </a>
         </div>
 
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} 
+            href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`} 
             className="bg-copperwood text-white px-6 py-3 rounded-full font-bold mt-4"
           >
             Appeler
