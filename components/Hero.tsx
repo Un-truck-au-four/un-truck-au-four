@@ -26,22 +26,22 @@ const Hero: React.FC = () => {
       <div className="relative z-10 px-6 max-w-4xl mx-auto animate-fade-in-up flex flex-col items-center">
         
         {/* Badges Fait Maison / Feu de Bois - Très visibles */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="bg-sunlit-clay text-black-forest px-6 py-2 rounded-full font-bold uppercase tracking-widest shadow-lg border-2 border-white/20 transform hover:scale-105 transition-transform">
-                <i className="fas fa-fire-alt mr-2 text-red-700"></i>
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
+            <div className="bg-sunlit-clay text-black-forest px-4 py-1.5 rounded-full font-bold uppercase tracking-wider text-xs md:text-sm shadow-lg border-2 border-white/20">
+                <i className="fas fa-fire-alt mr-1.5 text-red-700"></i>
                 Cuisson Feu de Bois
             </div>
-            <div className="bg-olive-leaf text-white px-6 py-2 rounded-full font-bold uppercase tracking-widest shadow-lg border-2 border-white/20 transform hover:scale-105 transition-transform">
-                <i className="fas fa-hands-wash mr-2"></i>
+            <div className="bg-olive-leaf text-white px-4 py-1.5 rounded-full font-bold uppercase tracking-wider text-xs md:text-sm shadow-lg border-2 border-white/20">
+                <i className="fas fa-hands-wash mr-1.5"></i>
                 Pâte Fait Maison
             </div>
         </div>
 
-        <h1 className="font-handwritten text-5xl md:text-7xl text-cornsilk mb-6 leading-tight drop-shadow-xl">
+        <h1 className="font-handwritten text-4xl sm:text-5xl md:text-7xl text-cornsilk mb-4 md:mb-6 leading-tight drop-shadow-xl">
           Pizza façon Napolitaine <br />
           <span className="text-sunlit-clay">& Tarte Flambée</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
+        <p className="text-base md:text-2xl text-gray-200 mb-8 md:mb-10 font-light max-w-2xl mx-auto px-2">
           L'authenticité italienne sur roues, cuit devant vous au feu de bois.
         </p>
         
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         >
           <span className="mr-2">Commander maintenant</span>
           <i className="fas fa-pizza-slice group-hover:rotate-12 transition-transform"></i>
-          <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
+          <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] md:text-xs font-bold px-1.5 md:px-2 py-1 rounded-full animate-bounce whitespace-nowrap">
             {PHONE_NUMBER_COMMANDE}
           </div>
         </a>

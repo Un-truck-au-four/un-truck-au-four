@@ -21,8 +21,8 @@ const Services: React.FC = () => {
 
   return (
     <section className="py-20 bg-olive-leaf text-cornsilk">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 text-center">
           {services.map((service, index) => (
             <div key={index} className="group p-6 rounded-2xl hover:bg-white/10 transition-colors duration-300">
               <div className="w-20 h-20 mx-auto bg-cornsilk rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">

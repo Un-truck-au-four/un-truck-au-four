@@ -22,7 +22,7 @@ const MenuCard: React.FC<{ item: MenuItem }> = ({ item }) => (
       </div>
     </div>
     
-    <div className="p-6 relative">
+    <div className="p-4 md:p-6 relative">
       <div className="flex justify-between items-baseline mb-2">
         <h3 className="font-handwritten text-2xl text-copperwood">{item.name}</h3>
       </div>
@@ -39,21 +39,20 @@ const MenuSection: React.FC = () => {
     <section id="menu" className="py-24 bg-cornsilk relative scroll-mt-24">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-olive-leaf to-transparent opacity-20"></div>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <span className="text-copperwood font-bold tracking-widest uppercase text-sm">Nos Créations</span>
           <h2 className="font-handwritten text-5xl md:text-6xl text-black-forest mt-2">La Carte</h2>
           
           {/* Sub-header highlighting quality */}
-          <div className="mt-6 flex justify-center items-center gap-6 text-olive-leaf font-bold uppercase tracking-wider text-sm md:text-base">
-            <span className="flex items-center"><i className="fas fa-fire-alt mr-2 text-red-600"></i> Feu de Bois</span>
-            <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
-            <span className="flex items-center"><i className="fas fa-seedling mr-2 text-green-600"></i> Produits Frais</span>
-            <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
-            <span className="flex items-center"><i className="fas fa-mug-hot mr-2 text-green-600"></i> Fait Maison</span>
-                        <span className="w-2 h-2 rounded-full bg-sunlit-clay"></span>
-            <span className="flex items-center"><i className="fas fa-heart mr-2 text-red-600"></i> Halal</span>
-
+          <div className="mt-6 flex flex-wrap justify-center items-center gap-x-4 gap-y-3 text-olive-leaf font-bold uppercase tracking-wider text-xs md:text-sm">
+            <span className="flex items-center gap-1.5"><i className="fas fa-fire-alt text-red-600"></i> Feu de Bois</span>
+            <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-sunlit-clay"></span>
+            <span className="flex items-center gap-1.5"><i className="fas fa-seedling text-green-600"></i> Produits Frais</span>
+            <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-sunlit-clay"></span>
+            <span className="flex items-center gap-1.5"><i className="fas fa-mug-hot text-green-600"></i> Fait Maison</span>
+            <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-sunlit-clay"></span>
+            <span className="flex items-center gap-1.5"><i className="fas fa-heart text-red-600"></i> Halal</span>
           </div>
           
           <div className="w-24 h-1 bg-sunlit-clay mx-auto mt-6 rounded-full"></div>
@@ -65,7 +64,7 @@ const MenuSection: React.FC = () => {
               {category.title}
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {category.items.map((item) => (
                 <MenuCard key={item.id} item={item} />
               ))}

@@ -21,15 +21,16 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black-forest/95 shadow-lg py-2' : 'bg-transparent py-4'
+        isScrolled || isOpen ? 'bg-black-forest/95 shadow-lg py-2' : 'bg-black-forest/60 md:bg-transparent py-3 md:py-4'
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center min-w-0">
         {/* Logo */}
-        <a href="#" className="font-handwritten text-3xl text-cornsilk hover:text-sunlit-clay transition-colors">
-          Un Truck Au Four
+        <a href="#" className="font-handwritten text-xl md:text-3xl text-cornsilk hover:text-sunlit-clay transition-colors">
+          <span className="hidden sm:inline">Un Truck Au Four</span>
+          <span className="sm:hidden">Au Four</span>
         </a>
 
         {/* Desktop Menu */}
@@ -53,8 +54,8 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-cornsilk text-2xl"
+        <button
+          className="md:hidden flex items-center justify-center w-11 h-11 text-white text-2xl rounded-lg border border-white/50 bg-black/40 flex-shrink-0"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -63,24 +64,28 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden bg-black-forest/98 absolute w-full transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96 border-b border-olive-leaf' : 'max-h-0'}`}>
-        <div className="flex flex-col items-center py-6 space-y-4">
+      <div className={`md:hidden absolute w-full transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+        <div className="bg-black-forest border-t border-olive-leaf/40 flex flex-col items-center py-8 space-y-1">
+          <span className="font-handwritten text-2xl text-cornsilk mb-6">Un Truck Au Four</span>
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-cornsilk text-lg font-semibold hover:text-sunlit-clay"
+              className="w-full text-center text-cornsilk text-lg font-semibold py-3 hover:bg-olive-leaf/20 hover:text-sunlit-clay transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <a 
-            href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`} 
-            className="bg-copperwood text-white px-6 py-3 rounded-full font-bold mt-4"
-          >
-            Appeler
-          </a>
+          <div className="pt-4 pb-2">
+            <a
+              href={`tel:${PHONE_NUMBER_COMMANDE.replace(/\s/g, '')}`}
+              className="bg-copperwood text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-sunlit-clay hover:text-black-forest transition-colors"
+            >
+              <i className="fas fa-phone-alt mr-2"></i>
+              {PHONE_NUMBER_COMMANDE}
+            </a>
+          </div>
         </div>
       </div>
     </nav>

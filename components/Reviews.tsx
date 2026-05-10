@@ -31,7 +31,7 @@ const Reviews: React.FC = () => {
             <div className="absolute bottom-20 right-20 w-80 h-80 bg-cornsilk rounded-full blur-3xl"></div>
         </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-handwritten text-5xl text-black-forest mb-4">Nos clients parlent de nous</h2>
           <div className="flex justify-center items-center gap-2 mb-4">
@@ -49,7 +49,7 @@ const Reviews: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {reviews.map((review, idx) => (
-                <div key={idx} className="bg-cornsilk/50 p-8 rounded-2xl shadow-sm border border-olive-leaf/10 hover:shadow-md transition-shadow">
+                <div key={idx} className="bg-cornsilk/50 p-5 md:p-8 rounded-2xl shadow-sm border border-olive-leaf/10 hover:shadow-md transition-shadow">
                     <div className="flex text-yellow-400 mb-4">
                         {[...Array(review.rating)].map((_, i) => (
                             <i key={i} className="fas fa-star"></i>

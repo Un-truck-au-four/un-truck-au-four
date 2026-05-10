@@ -87,7 +87,7 @@ const Location: React.FC = () => {
        {/* Decorative pattern */}
        <div className="absolute top-0 right-0 w-64 h-64 bg-olive-leaf/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
        
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
             <span className="text-copperwood font-bold tracking-widest uppercase text-sm">Le Planning</span>
             <h2 className="font-handwritten text-5xl md:text-6xl text-black-forest mt-2">Où nous trouver ?</h2>

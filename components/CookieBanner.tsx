@@ -25,10 +25,10 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onOpenLegal }) => {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
-      <div className="max-w-4xl mx-auto bg-black-forest border border-olive-leaf rounded-2xl shadow-2xl p-6 flex flex-col md:flex-row items-center gap-6">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-6" style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}>
+      <div className="max-w-4xl mx-auto bg-black-forest border border-olive-leaf rounded-2xl shadow-2xl p-4 md:p-6 flex flex-col md:flex-row items-center gap-4 md:gap-6">
         <div className="flex-1 text-center md:text-left">
-          <p className="text-sm text-gray-300 leading-relaxed">
+          <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
             <i className="fas fa-cookie-bite text-sunlit-clay mr-2"></i>
             Ce site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement. En continuant, vous acceptez notre{' '}
             <button
@@ -47,7 +47,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onOpenLegal }) => {
             .
           </p>
         </div>
-        <div className="flex gap-3 shrink-0">
+        <div className="flex gap-3 shrink-0 w-full md:w-auto justify-center md:justify-end">
           <button
             onClick={refuse}
             className="px-5 py-2 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white text-sm font-semibold transition-colors"
