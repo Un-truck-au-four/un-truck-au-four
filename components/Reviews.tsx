@@ -35,13 +35,13 @@ const Reviews: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="font-handwritten text-5xl text-black-forest mb-4">Nos clients parlent de nous</h2>
           <div className="flex justify-center items-center gap-2 mb-4">
-              <span className="text-3xl font-bold text-black-forest">4.8</span>
+              <span className="text-3xl font-bold text-black-forest">4.9</span>
               <div className="flex text-yellow-400 text-2xl">
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
-                  <i className="fas fa-star-half-alt"></i>
+                  <i className="fas fa-star"></i>
               </div>
               <span className="text-gray-500 text-sm ml-2">(sur Google)</span>
           </div>
